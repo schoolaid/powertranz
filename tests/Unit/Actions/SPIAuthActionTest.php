@@ -1,12 +1,12 @@
 <?php
-namespace Said\Powertranz\Tests\Unit\Actions;
+namespace SchoolAid\Powertranz\Tests\Unit\Actions;
 
-use Said\Powertranz\Actions\SPIAuth;
-use Said\Powertranz\Actions\SPIPayment;
-use Said\Powertranz\Tests\UnitTestCase;
-use Said\Powertranz\Requests\PowertranzBody;
-use Said\Powertranz\Entities\PowertranzCreditCard;
-use Said\Powertranz\Exceptions\BodyNotSetException;
+use SchoolAid\Powertranz\Actions\SPIAuth;
+use SchoolAid\Powertranz\Actions\SPIPayment;
+use SchoolAid\Powertranz\Tests\UnitTestCase;
+use SchoolAid\Powertranz\Requests\PowertranzBody;
+use SchoolAid\Powertranz\Entities\PowertranzCreditCard;
+use SchoolAid\Powertranz\Exceptions\BodyNotSetException;
 
 class SPIAuthActionTest extends UnitTestCase
 {

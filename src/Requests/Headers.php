@@ -1,8 +1,8 @@
 <?php
-namespace Said\Powertranz\Requests;
+namespace SchoolAid\Powertranz\Requests;
 
-use Said\Powertranz\Requests\PowertranzHeaders;
-use Said\Powertranz\Exceptions\EnvNotSetException;
+use SchoolAid\Powertranz\Requests\PowertranzHeaders;
+use SchoolAid\Powertranz\Exceptions\EnvNotSetException;
 
 class Headers
 {

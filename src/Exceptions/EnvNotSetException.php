@@ -1,5 +1,5 @@
 <?php
-namespace Said\Powertranz\Exceptions;
+namespace SchoolAid\Powertranz\Exceptions;
 
 use Exception;
 

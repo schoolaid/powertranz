@@ -1,8 +1,8 @@
 <?php
-namespace Said\Powertranz\Tests\Unit\Actions;
+namespace SchoolAid\Powertranz\Tests\Unit\Actions;
 
-use Said\Powertranz\Actions\Alive;
-use Said\Powertranz\Tests\UnitTestCase;
+use SchoolAid\Powertranz\Actions\Alive;
+use SchoolAid\Powertranz\Tests\UnitTestCase;
 
 class AliveActionTest extends UnitTestCase
 {

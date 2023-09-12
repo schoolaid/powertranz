@@ -1,9 +1,9 @@
 <?php
-namespace Said\Powertranz\Actions\Interfaces;
+namespace SchoolAid\Powertranz\Actions\Interfaces;
 
 use GuzzleHttp\Psr7\Response;
-use Said\Powertranz\Requests\PowertranzClient;
-use Said\Powertranz\Exceptions\BodyNotSetException;
+use SchoolAid\Powertranz\Requests\PowertranzClient;
+use SchoolAid\Powertranz\Exceptions\BodyNotSetException;
 
 abstract class BasePowertranzAction implements PowertranzAction
 {
@@ -18,7 +18,7 @@ abstract class BasePowertranzAction implements PowertranzAction
 
     /*
      * Static function to return the singleton instance of this class
-     * @return Said\Powertranz\Actions\Interfaces\BasePowertranzAction
+     * @return SchoolAid\Powertranz\Actions\Interfaces\BasePowertranzAction
      */
     public static function getInstance()
     {

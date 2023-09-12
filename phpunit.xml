@@ -19,6 +19,7 @@
         <server name="POWERTRANZ_URL" value="https://staging.ptranz.com/" />
         <server name="POWERTRANZ_ID" value="" />
         <server name="POWERTRANZ_PASSWORD" value="" />
+        <server name="POWERTRANZ_CALLBACK" value="" />
     </php>
     <source>
         <include>

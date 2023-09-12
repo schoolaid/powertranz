@@ -1,9 +1,9 @@
 <?php
-namespace Said\Powertranz\Tests\Unit\Actions;
+namespace SchoolAid\Powertranz\Tests\Unit\Actions;
 
-use Said\Powertranz\Tests\UnitTestCase;
-use Said\Powertranz\Actions\SPIRiskMgmt;
-use Said\Powertranz\Exceptions\NotImplementedException;
+use SchoolAid\Powertranz\Tests\UnitTestCase;
+use SchoolAid\Powertranz\Actions\SPIRiskMgmt;
+use SchoolAid\Powertranz\Exceptions\NotImplementedException;
 
 class SPIRiskMgmtActionTest extends UnitTestCase
 {

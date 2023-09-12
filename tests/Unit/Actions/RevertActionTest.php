@@ -1,12 +1,12 @@
 <?php
-namespace Said\Powertranz\Tests\Unit\Actions;
+namespace SchoolAid\Powertranz\Tests\Unit\Actions;
 
 use Ramsey\Uuid\Uuid;
-use Said\Powertranz\Actions\Revert;
-use Said\Powertranz\Tests\UnitTestCase;
-use Said\Powertranz\Requests\PowertranzBody;
-use Said\Powertranz\Entities\PowertranzCreditCard;
-use Said\Powertranz\Exceptions\BodyNotSetException;
+use SchoolAid\Powertranz\Actions\Revert;
+use SchoolAid\Powertranz\Tests\UnitTestCase;
+use SchoolAid\Powertranz\Requests\PowertranzBody;
+use SchoolAid\Powertranz\Entities\PowertranzCreditCard;
+use SchoolAid\Powertranz\Exceptions\BodyNotSetException;
 
 class RevertActionTest extends UnitTestCase
 {

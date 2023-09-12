@@ -1,14 +1,14 @@
 <?php
-namespace Said\Powertranz\Requests;
+namespace SchoolAid\Powertranz\Requests;
 
 use GuzzleHttp\Client;
-use Said\Powertranz\Requests\Headers;
 use Illuminate\Support\Facades\Config;
+use SchoolAid\Powertranz\Requests\Headers;
 
 class PowertranzClient
 {
     /*
-     * @var Said\Powertranz\Request\PowertranzClient $instace Variable for singleton instance
+     * @var SchoolAid\Powertranz\Request\PowertranzClient $instace Variable for singleton instance
      */
     public static PowertranzClient $instance;
 
@@ -19,7 +19,7 @@ class PowertranzClient
 
     /*
      * Static function to return the singleton instance of this class
-     * @return Said\Powetranz\Request\PowertranzClient
+     * @return SchoolAid\Powetranz\Request\PowertranzClient
      */
     public static function getInstance(): PowertranzClient
     {

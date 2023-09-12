@@ -1,11 +1,11 @@
 <?php
-namespace Said\Powertranz\Tests\Unit\Actions;
+namespace SchoolAid\Powertranz\Tests\Unit\Actions;
 
 use Ramsey\Uuid\Uuid;
-use Said\Powertranz\Actions\Capture;
-use Said\Powertranz\Tests\UnitTestCase;
-use Said\Powertranz\Requests\PowertranzBody;
-use Said\Powertranz\Exceptions\BodyNotSetException;
+use SchoolAid\Powertranz\Actions\Capture;
+use SchoolAid\Powertranz\Tests\UnitTestCase;
+use SchoolAid\Powertranz\Requests\PowertranzBody;
+use SchoolAid\Powertranz\Exceptions\BodyNotSetException;
 
 class CaptureActionTest extends UnitTestCase
 {

@@ -1,8 +1,8 @@
 <?php
-namespace Said\Powertranz\Tests\Unit;
+namespace SchoolAid\Powertranz\Tests\Unit;
 
-use Said\Powertranz\Tests\UnitTestCase;
-use Said\Powertranz\Requests\PowertranzClient;
+use SchoolAid\Powertranz\Tests\UnitTestCase;
+use SchoolAid\Powertranz\Requests\PowertranzClient;
 
 class PowertranzClientTest extends UnitTestCase
 {

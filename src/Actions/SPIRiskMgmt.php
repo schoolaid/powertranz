@@ -1,8 +1,8 @@
 <?php
-namespace Said\Powertranz\Actions;
+namespace SchoolAid\Powertranz\Actions;
 
-use Said\Powertranz\Exceptions\NotImplementedException;
-use Said\Powertranz\Actions\Interfaces\BasePowertranzAction;
+use SchoolAid\Powertranz\Exceptions\NotImplementedException;
+use SchoolAid\Powertranz\Actions\Interfaces\BasePowertranzAction;
 
 /*
  * Powertranz - /api/spi/riskmgmt

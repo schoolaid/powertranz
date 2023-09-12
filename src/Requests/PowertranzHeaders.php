@@ -1,5 +1,5 @@
 <?php
-namespace Said\Powertranz\Requests;
+namespace SchoolAid\Powertranz\Requests;
 
 enum PowertranzHeaders: string {
     case POWERTRANZ_ID          = 'PowerTranz-PowerTranzId';

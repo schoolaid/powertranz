@@ -1,8 +1,8 @@
 <?php
-namespace Said\Powertranz\Requests;
+namespace SchoolAid\Powertranz\Requests;
 
 use Ramsey\Uuid\Uuid;
-use Said\Powertranz\Entities\PowertranzCreditCard;
+use SchoolAid\Powertranz\Entities\PowertranzCreditCard;
 
 class PowertranzBody
 {

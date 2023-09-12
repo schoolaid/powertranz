@@ -1,8 +1,8 @@
 <?php
-namespace Said\Powertranz\Actions;
+namespace SchoolAid\Powertranz\Actions;
 
-use Said\Powertranz\Requests\PowertranzClient;
-use Said\Powertranz\Actions\Interfaces\BasePowertranzAction;
+use SchoolAid\Powertranz\Requests\PowertranzClient;
+use SchoolAid\Powertranz\Actions\Interfaces\BasePowertranzAction;
 
 /*
  * Powertranz - /api/spi/payment

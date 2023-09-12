@@ -1,5 +1,5 @@
 <?php
-namespace Said\Powertranz\Tests\Unit;
+namespace SchoolAid\Powertranz\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 

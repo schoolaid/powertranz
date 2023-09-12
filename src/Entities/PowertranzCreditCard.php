@@ -1,5 +1,5 @@
 <?php
-namespace Said\Powertranz\Entities;
+namespace SchoolAid\Powertranz\Entities;
 
 use Ramsey\Uuid\Uuid;
 

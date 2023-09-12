@@ -1,5 +1,5 @@
 <?php
-namespace Said\Powertranz\Actions\Interfaces;
+namespace SchoolAid\Powertranz\Actions\Interfaces;
 
 interface PowertranzAction
 {

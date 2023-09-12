@@ -1,7 +1,7 @@
 <?php
-namespace Said\Powertranz\Actions;
+namespace SchoolAid\Powertranz\Actions;
 
-use Said\Powertranz\Actions\Interfaces\BasePowertranzAction;
+use SchoolAid\Powertranz\Actions\Interfaces\BasePowertranzAction;
 
 class Sale extends BasePowertranzAction
 {

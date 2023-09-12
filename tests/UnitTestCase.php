@@ -1,5 +1,5 @@
 <?php
-namespace Said\Powertranz\Tests;
+namespace SchoolAid\Powertranz\Tests;
 
 use Orchestra\Testbench\TestCase;
 
@@ -21,6 +21,7 @@ class UnitTestCase extends TestCase
         $config->set('powertranz.url', env('POWERTRANZ_URL'));
         $config->set('powertranz.id', env('POWERTRANZ_ID'));
         $config->set('powertranz.password', env('POWERTRANZ_PASSWORD'));
+        $config->set('powertranz.callback', env('POWERTRANZ_CALLBACK'));
     }
 
 }

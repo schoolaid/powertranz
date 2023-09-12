@@ -17,12 +17,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Said\\Powertranz\\": "src/"
+            "SchoolAid\\Powertranz\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Said\\Powertranz\\Tests\\": "tests/"
+            "SchoolAid\\Powertranz\\Tests\\": "tests/"
         }
     },
     "require-dev": {
