@@ -99,13 +99,18 @@ class PowertranzBody
         $body['BillingAddress'] = [
             'Line1' => $billingAddress,
         ];
-
         $body["Source"] = [
-            "CardPan"        => $cardPan,
             "CardCvv"        => $cardCvv,
             "CardExpiration" => $cardExpiration,
             "CardholderName" => $cardName,
         ];
+        //support for tokenized cards transactions
+        if (strlen($cardPan) > 16) {
+            $body["Source"]["CardPan"] = "";
+            $body["Source"]["Token"]   = $cardPan;
+        } else {
+            $body["Source"]["CardPan"] = $cardPan;
+        }
 
         $body["ExtendedData"] = [
             "ThreeDSecure"        => [
