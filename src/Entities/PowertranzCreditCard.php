@@ -12,7 +12,12 @@ class PowertranzCreditCard
         public string $expiryDate,
         public string $name,
         public string $billingAddress = "Guatemala",
-    ) {}
+        public string $referencePan = "",
+    ) {
+        if ($referencePan == "") {
+            $referencePan = $pan;
+        }
+    }
 
     public function orderId(): string
     {
