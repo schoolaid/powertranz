@@ -93,7 +93,7 @@ class PowertranzBody
             "TotalAmount"            => $amount,
             "CurrencyCode"           => "320",
             "Tokenize"               => true,
-            "ThreeDSecure"           => true,
+
             "OrderIdentifier"        => $orderId . "",
             "AddressMatch"           => false,
             "AllowPaymentCompletion" => true,
@@ -111,8 +111,10 @@ class PowertranzBody
         if (strlen($cardPan) > 16) {
             $body["Source"]["CardPan"] = "";
             $body["Source"]["Token"]   = $cardPan;
+            $body["ThreeDSecure"]      = false;
         } else {
             $body["Source"]["CardPan"] = $cardPan;
+            $body["ThreeDSecure"]      = true;
         }
 
         $body["ExtendedData"] = [
