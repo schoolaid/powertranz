@@ -6,11 +6,11 @@ use SchoolAid\Powertranz\Exceptions\EnvNotSetException;
 
 class Headers
 {
-    public static function build(string $powertranzId = null, string $powertranzPassword = null, string $powertranzGatewayKey = null): array
+    public static function build(): array
     {
-        $powertranzId         = $powertranzId ?? config('powertranz.id');
-        $powertranzPassword   = $powertranzPassword ?? config('powertranz.password');
-        $powertranzGatewayKey = $powertranzGatewayKey ?? config('powertranz.gateway_key');
+        $powertranzId         = config('powertranz.id');
+        $powertranzPassword   = config('powertranz.password');
+        $powertranzGatewayKey = config('powertranz.gateway_key');
         if (!$powertranzId) {
             throw new EnvNotSetException('POWERTRANZ_ID is not set.');
         }
