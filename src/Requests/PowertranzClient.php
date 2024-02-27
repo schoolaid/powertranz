@@ -31,12 +31,12 @@ class PowertranzClient
         return $instance;
     }
 
-    public function __construct()
+    public function __construct(Headers $customHeaders = null)
     {
         $powertranzURL = config('powertranz.url');
         $this->client  = new Client([
             'base_uri' => $powertranzURL,
-            'headers'  => Headers::build(),
+            'headers'  => $customHeaders ?? Headers::build(),
         ]);
     }
 
