@@ -1,8 +1,8 @@
 <?php
 namespace SchoolAid\Powertranz\Actions;
 
-use SchoolAid\Powertranz\Exceptions\NotImplementedException;
 use SchoolAid\Powertranz\Actions\Interfaces\BasePowertranzAction;
+use SchoolAid\Powertranz\Requests\PowertranzClient;
 
 /*
  * Powertranz - /api/spi/riskmgmt
@@ -17,8 +17,19 @@ class SPIRiskMgmt extends BasePowertranzAction
         return 'api/spi/riskmgmt';
     }
 
-    public function submit()
-    {
-        throw new NotImplementedException("Not implemented");
-    }
+    // public function submit()
+    // {
+    //     $client   = PowertranzClient::getInstance()->client();
+    //     $response = $client->request($this->method(), $this->url(), [
+    //         'json'    => $this->token,
+    //         'headers' => [
+    //             'Content-Type' => 'application/json-patch+json',
+    //         ],
+    //     ]);
+
+    //     return [
+    //         'code' => $response->getStatusCode(),
+    //         'body' => $this->parseBody($response),
+    //     ];
+    // }
 }

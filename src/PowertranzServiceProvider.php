@@ -1,4 +1,5 @@
 <?php
+
 namespace SchoolAid\Powertranz;
 
 use Illuminate\Support\ServiceProvider;
