@@ -99,14 +99,19 @@ class PowertranzBody
             'billingAddress', 'amount'
         );
 
+        $isToken = !preg_match('/^\d{13,19}$/', $cardPan);
+
         $rules = [
             'transactionId' => ['required', 'uuid'],
             'orderId' => ['required'],
-            'cardPan' => ['required', new CardNumber],
-            'cardCvv' => ['required', new CardCvc($cardPan)],
             'cardExpiration' => ['required', 'regex:/^\d{2}(0[1-9]|1[0-2])$/'],
             'amount' => ['numeric'],
         ];
+
+        if (!$isToken) {
+            $rules['cardPan'] = ['required', new CardNumber];
+            $rules['cardCvv'] = ['required', new CardCvc($cardPan)];
+        }
 
         $validator = Validator::make($data, $rules);
         if ($validator->fails()) {
@@ -133,10 +138,9 @@ class PowertranzBody
             'CardholderName' => $cardName,
         ];
         // support for tokenized cards transactions
-        if (strlen($cardPan) > 16) {
-            $body['Source']['CardPan'] = '';
+        if ($isToken) {
             $body['Source']['Token'] = $cardPan;
-            $body['ThreeDSecure'] = false;
+            $body['ThreeDSecure'] = true;
         } else {
             $body['Source']['CardPan'] = $cardPan;
             $body['ThreeDSecure'] = true;
@@ -155,6 +159,7 @@ class PowertranzBody
 
     public static function riskMgmtPowertranzBody(
         string $transactionId,
+        string $referenceId,
         string $cardPan,
         string $cardCvv,
         string $cardExpiration,
@@ -162,7 +167,7 @@ class PowertranzBody
     ): array {
 
         $data = compact(
-            'transactionId', 'cardPan', 'cardCvv', 'cardExpiration', 'cardName'
+            'transactionId', 'referenceId', 'cardPan', 'cardCvv', 'cardExpiration', 'cardName'
         );
 
         $rules = [
@@ -179,9 +184,9 @@ class PowertranzBody
 
         $body = [
             'TransactionIdentifier' => $transactionId,
-            'OrderIdentifier' => $transactionId,
+            'OrderIdentifier' => $referenceId,
             'Tokenize' => true,
-            'TotalAmount' => 1,
+            'TotalAmount' => 0,
             'ThreeDSecure' => true,
             'CurrencyCode' => '320',
             'Source' => [
@@ -195,7 +200,7 @@ class PowertranzBody
                     'ChallengeWindowSize' => 4,
                     'ChallengeIndicator' => '01',
                 ],
-                'MerchantResponseUrl' => config('powertranz.callback'),
+                'MerchantResponseUrl' => config('powertranz.callback').'?referenceId='.$referenceId,
             ],
         ];
 
