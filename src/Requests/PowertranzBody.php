@@ -91,12 +91,14 @@ class PowertranzBody
         string $cardExpiration,
         string $cardName,
         string $billingAddress,
-        float $amount
+        float $amount,
+        string $email = '',
+        string $phone = '',
     ): array {
 
         $data = compact(
             'transactionId', 'orderId', 'cardPan', 'cardCvv', 'cardExpiration', 'cardName',
-            'billingAddress', 'amount'
+            'billingAddress', 'amount', 'email', 'phone'
         );
 
         $isToken = !preg_match('/^\d{13,19}$/', $cardPan);
@@ -131,7 +133,10 @@ class PowertranzBody
 
         $body['BillingAddress'] = [
             'Line1' => $billingAddress,
+            'EmailAddress' => $email,
+            'PhoneNumber' => $phone,
         ];
+
         $body['Source'] = [
             'CardCvv' => $cardCvv,
             'CardExpiration' => $cardExpiration,
