@@ -1,4 +1,5 @@
 <?php
+
 namespace SchoolAid\Powertranz;
 
 use Illuminate\Support\ServiceProvider;
@@ -10,8 +11,11 @@ class PowertranzServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $config = __DIR__.'/../config/powertranz.php';
+        $this->mergeConfigFrom($config, 'powertranz');
+
         $this->publishes([
-            __DIR__ . '/../config/powertranz.php' => config_path('powertranz.php'),
+            $config => config_path('powertranz.php'),
         ]);
     }
 }

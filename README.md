@@ -91,7 +91,20 @@ $body = PowertranzBody::powertranzBody(
 )
 $response = SPISale::getInstance()->setBody($body)->submit()
 ```
-❌ SPIRiskMgmt<br>
+✅ SPIRiskMgmt
+```php
+use SchoolAid\Powertranz\Requests\PowertranzBody;
+use SchoolAid\Powertranz\Actions\SPISale;
+
+$body = PowertranzBody::riskMgmtPowertranzBody(
+    $transactionId,
+    $cardPan,
+    $cardCvv, //yyMM format
+    $cardExpiration,
+    $cardName
+)
+$response = SPIRiskMgmt::getInstance()->setBody($body)->submit()
+```
 
 ## Other ways to build the body
 PowertranzBody class provides another way to generate sales body from other ways.
