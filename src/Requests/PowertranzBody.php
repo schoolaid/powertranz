@@ -83,6 +83,15 @@ class PowertranzBody
         ];
     }
 
+    public static function removeTildes(string $text): string
+    {
+        return strtr($text, [
+            'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U',
+            'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
+            'Ñ' => 'N', 'ñ' => 'n',
+        ]);
+    }
+
     public static function powertranzBody(
         string $transactionId,
         string $orderId,
@@ -100,6 +109,9 @@ class PowertranzBody
             'transactionId', 'orderId', 'cardPan', 'cardCvv', 'cardExpiration', 'cardName',
             'billingAddress', 'amount', 'email', 'phone'
         );
+
+        $cardName = self::removeTildes($cardName);
+        $billingAddress = self::removeTildes($billingAddress);
 
         $isToken = !preg_match('/^\d{13,19}$/', $cardPan);
 
@@ -174,6 +186,8 @@ class PowertranzBody
         $data = compact(
             'transactionId', 'referenceId', 'cardPan', 'cardCvv', 'cardExpiration', 'cardName'
         );
+
+        $cardName = self::removeTildes($cardName);
 
         $rules = [
             'transactionId' => ['required', 'uuid'],
